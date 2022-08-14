@@ -6,8 +6,8 @@ if __name__ == "__main__":
     parser.add_argument("--save_dir", type=str, default="../model/japanese-gpt2-medium")
     args = parser.parse_args()
 
-    tokenizer = AutoTokenizer.from_pretrained("../model/japanese-gpt2-medium", trust_remote_code=True)
-    model = AutoModelForCausalLM.from_pretrained("../model/japanese-gpt2-medium")
+    tokenizer = AutoTokenizer.from_pretrained(args.save_dir, trust_remote_code=True)
+    model = AutoModelForCausalLM.from_pretrained(args.save_dir)
 
     input_str = "天にまします我らの父よ。願わくは"
     model_input = tokenizer(input_str, return_tensors="pt")
