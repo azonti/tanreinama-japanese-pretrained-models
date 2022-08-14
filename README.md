@@ -1,4 +1,4 @@
-# Script to port [tanreinama](https://github.com/tanreinama)'s Japanese pretrained models to HuggingFace Transformers
+# Scripts to port [tanreinama](https://github.com/tanreinama)'s Japanese pretrained models to HuggingFace Transformers
 
 ## Usage
 
