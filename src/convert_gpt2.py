@@ -1,12 +1,20 @@
 import argparse
 import os
-import torch
-from transformers import GPT2Config, GPT2LMHeadModel
-from tokenization.tokenization_gpt2_japanese import GPT2JapaneseTokenizer
+from tokenization.tokenization_gpt2_japanese import (
+    GPT2JapaneseTokenizer,
+)
+from transformers import (
+    GPT2Config,
+    GPT2LMHeadModel,
+)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--save_dir", type=str, default="../model/japanese-gpt2-medium")
+    parser.add_argument(
+        "--save_dir",
+        type=str,
+        default="../model/japanese-gpt2-medium"
+    )
     args = parser.parse_args()
 
     if not os.path.exists(args.save_dir):
@@ -23,4 +31,5 @@ if __name__ == "__main__":
 
     config = GPT2Config.from_json_file("config.json")
     model = GPT2LMHeadModel.from_pretrained("pytorch_model.bin", config=config)
+    assert isinstance(model, GPT2LMHeadModel)
     model.save_pretrained(args.save_dir)

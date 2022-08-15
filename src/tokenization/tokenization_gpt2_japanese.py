@@ -30,8 +30,6 @@ import jaconv
 import json
 import re
 import numpy as np
-from shutil import copyfile
-
 
 from transformers.tokenization_utils import PreTrainedTokenizer
 from transformers.utils import logging
