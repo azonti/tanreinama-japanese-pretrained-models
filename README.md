@@ -1,9 +1,9 @@
 # Scripts to port [tanreinama](https://github.com/tanreinama)'s Japanese pretrained models to HuggingFace Transformers
 
-## Usage
+## How to port tanreinama's Japanese GPT-2 (medium) model
 
 1. Download `ja-bpe.txt` and `emoji.json` from [tanreinama/gpt2-japanese](https://github.com/tanreinama/gpt2-japanese) to `tokenizer` directory.
-2. Download a checkpoint from [tanreinama/gpt2-japanese](https://github.com/tanreinama/gpt2-japanese) to `checkpoint` directory.
+2. Download the checkpoint from [tanreinama/gpt2-japanese](https://github.com/tanreinama/gpt2-japanese) to `checkpoint` directory.
 3. Run the below script.
 
 ```bash
